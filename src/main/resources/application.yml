@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ajo-ledger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ajosavings
+    username: ajosavings
+    password: ajosavings
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
